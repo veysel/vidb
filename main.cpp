@@ -1,8 +1,10 @@
 #include <iostream>
+#include "App/View/Home/HomeView.cpp"
+
 using namespace std;
 
 int main()
 {
-    cout << "Hello";
+    HomeView.show();
     cin.get();
 }

@@ -1,4 +1,7 @@
+#include <iostream>
 #include "../../Model/Home/HomeModel.cpp"
+
+using namespace std;
 
 class HomeController
 {

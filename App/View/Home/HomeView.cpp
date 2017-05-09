@@ -21,4 +21,5 @@ void HomeView::show()
     cout << "  \\_/ |_|\\__,_|_.__/ " << endl;
     cout << endl;
     cout << "_____________________" << endl;
+    cout << endl;
 }

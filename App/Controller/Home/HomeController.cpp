@@ -13,7 +13,7 @@ class HomeController
 
 HomeController::HomeController()
 {
-    _homeModel.setHomeTitle("Deneme");
+    _homeModel.setHomeTitle("");
 }
 
 string HomeController::getHomeTitle()

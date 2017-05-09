@@ -3,21 +3,20 @@ using namespace std;
 
 class HomeModel
 {
-  private:
-    string HomeTitle;
+private:
+  string HomeTitle;
 
-  public:
-    void setHomeTitle(string);
-    string getHomeTitle();
-
-} HomeModel;
+public:
+  void setHomeTitle(string);
+  string getHomeTitle();
+};
 
 void HomeModel::setHomeTitle(string tempTitle)
 {
-    HomeTitle = tempTitle;
+  HomeTitle = tempTitle;
 }
 
 string HomeModel::getHomeTitle()
 {
-    return HomeTitle;
+  return HomeTitle;
 }

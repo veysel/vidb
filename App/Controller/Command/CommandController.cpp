@@ -1,5 +1,5 @@
 #include <iostream>
-#include <../../Model/Command/CommandModel.cpp>
+#include "../../Model/Command/CommandModel.cpp"
 
 using namespace std;
 
@@ -8,19 +8,38 @@ class CommandController
 
 private:
   CommandModel _commandModel;
+  bool checkReadObject;
 
 public:
+  CommandController();
   void setCommandText(string tempCommandText);
   string getCommandText();
+  bool checkRead();
 
 } CommandController;
 
-CommandModel::setCommandText(string tempCommandText)
+CommandController::CommandController()
 {
-  _commandModel.setCommandText(tempCommandText);
+  checkReadObject = true;
 }
 
-CommandModel::getCommandText()
+CommandController::setCommandText(string tempCommandText)
 {
-  return _commandModel.getCommandText();
+  _commandModel.CommandText = tempCommandText;
+
+  // For Test :)
+  if (_commandModel.CommandText == "exit")
+  {
+    checkReadObject = false;
+  }
+}
+
+CommandController::getCommandText()
+{
+  return _commandModel.CommandText;
+}
+
+CommandController::checkRead()
+{
+  return checkReadObject;
 }

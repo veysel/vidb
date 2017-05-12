@@ -1,5 +1,5 @@
 #include <iostream>
-#include <../../Controller/CommandController.cpp>
+#include "../../Controller/Command/CommandController.cpp"
 
 using namespace std;
 
@@ -12,8 +12,11 @@ class CommandView
 
 void CommandView::readCommand()
 {
-    cout << "vidb >>> ";
-    string tempCommandText;
-    cin >> tempCommandText;
-    CommandController.setCommandText(tempCommandText);
+    do
+    {
+        cout << "vidb >>> ";
+        string tempCommandText;
+        cin >> tempCommandText;
+        CommandController.setCommandText(tempCommandText);
+    } while (CommandController.checkRead());
 }

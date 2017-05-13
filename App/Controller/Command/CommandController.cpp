@@ -23,7 +23,7 @@ CommandController::CommandController()
   checkReadObject = true;
 }
 
-CommandController::setCommandText(string tempCommandText)
+void CommandController::setCommandText(string tempCommandText)
 {
   _commandModel.CommandText = tempCommandText;
 
@@ -34,12 +34,12 @@ CommandController::setCommandText(string tempCommandText)
   }
 }
 
-CommandController::getCommandText()
+string CommandController::getCommandText()
 {
   return _commandModel.CommandText;
 }
 
-CommandController::checkRead()
+bool CommandController::checkRead()
 {
   return checkReadObject;
 }
